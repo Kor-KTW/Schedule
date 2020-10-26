@@ -3,13 +3,17 @@ import time
 import datetime
 import os,glob
 import shutil
-
+import re
 
 a = input("기존의 스케쥴을 정리하시겠습니까? Y/N")
 a = a.lower()
 if a =='y':
     for file in glob.glob("*_*"):
+        a = re.compile(".py$")
+        if a.search(file):
+            continue
         shutil.move(file,'Past/')
+
 daystring = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
 today = datetime.date.today()
 b = input("새로운 주간 일정 파일을 생성하시겠습니까? Y/N")
