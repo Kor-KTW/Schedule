@@ -1,5 +1,6 @@
 import time
 import datetime
+from datetime import datetime as dt
 import os,glob
 import shutil
 import re
@@ -7,6 +8,7 @@ import re
 input1 = input("기존의 스케쥴을 정리하시겠습니까? Y/N")
 input1 = input1.lower()
 a = re.compile(".py$")
+b = re.compile("_")
 print("1")
 if input1 =='y':
     print("2")
@@ -19,5 +21,19 @@ if input1 =='y':
             
             
     print(glob.glob('*_*'))
-
+    if b.search(file):
+        print('a')
         #shutil.move(file,'Past/')
+    todaynumber = datetime.date.today()
+    print(b.search(str(todaynumber)))
+    print(b.findall(str(todaynumber)))
+
+    print(str(todaynumber))
+    td = datetime.timedelta(days=1) # 100일 저장
+    i = dt.strptime('2020_11_01','20%y_%m_%d')
+
+    # if todaynumber > todaynumber+td:
+    if todaynumber > i:
+        print(1)
+    else:
+        print(2)
