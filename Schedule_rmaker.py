@@ -1,7 +1,12 @@
 # write는 덮어쓰기이니 주의할 것
 import time
 import datetime
-import os
+import os,glob
+import shutil
+import re
+
+daystring = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
+today = datetime.date.today()
 b = input("새로운 1주간 일정 파일을 생성하시겠습니까? Y/N")
 b = b.lower()
 if b =='y':
