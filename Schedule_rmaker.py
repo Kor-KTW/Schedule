@@ -1,21 +1,7 @@
 # write는 덮어쓰기이니 주의할 것
 import time
 import datetime
-import os,glob
-import shutil
-import re
-
-input1 = input("기존의 스케쥴을 정리하시겠습니까? Y/N")
-input1 = input1.lower()
-if input1 =='y':
-    for file in glob.glob("*_*"):
-        a = re.compile(".py$")
-        if a.search(file):
-            continue
-        shutil.move(file,'Past/')
-
-daystring = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
-today = datetime.date.today()
+import os
 b = input("새로운 1주간 일정 파일을 생성하시겠습니까? Y/N")
 b = b.lower()
 if b =='y':
