@@ -24,14 +24,15 @@ if input1 =='y':
     if b.search(file):
         print('a')
         #shutil.move(file,'Past/')
-    todaynumber = datetime.date.today()
+    todaynumber = datetime.datetime.today()
     print(b.search(str(todaynumber)))
     print(b.findall(str(todaynumber)))
 
     print(str(todaynumber))
     td = datetime.timedelta(days=1) # 100일 저장
     i = dt.strptime('2020_11_01','20%y_%m_%d')
-
+    print(type(i))
+    print(type(todaynumber))
     # if todaynumber > todaynumber+td:
     if todaynumber > i:
         print(1)
