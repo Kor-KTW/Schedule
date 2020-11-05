@@ -25,7 +25,7 @@ if input1 =='y':
             # print(ordering, ordering2)
             if int(ordering) < int(ordering2):
                 shutil.move(file,'Past/')
-#                print(str(file)+"(년_월_일)에 해당하는 스케쥴이 이동되었습니다.")
+                print(str(file)+"(년_월_일)에 해당하는 스케쥴이 이동되었습니다.")
     print("모든 지난 스케쥴의 이동이 완료되었습니다.")
 
         
