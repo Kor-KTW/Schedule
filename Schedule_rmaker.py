@@ -24,7 +24,7 @@ if b =='y':
             print("5. ", file=schedule_file)
 
             print(" - 주간일정 - ", file=schedule_file)
-            print("1. 파이썬 웹 스크롤링 강의 마무리하기", file=schedule_file)
+            print("1. ", file=schedule_file)
             print("2. ", file=schedule_file)
             print("3. ", file=schedule_file)
             print("4. ", file=schedule_file)
